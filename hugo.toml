@@ -16,7 +16,7 @@ buildExpired = false
 [params]
   env = "production"
   author = "Xiaoping Huang"
-  description = "个人技术博客"
+  description = "大数据与生活随笔"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
@@ -34,7 +34,7 @@ buildExpired = false
 
   [params.homeInfoParams]
     Title = "Hello"
-    Content = "欢迎来到我的博客 — 记录技术探索与思考"
+    Content = "记录大数据技术内核与生活点滴"
 
   [[params.socialIcons]]
     name = "github"
@@ -62,9 +62,9 @@ buildExpired = false
     noClasses = false
 
 [[menu.main]]
-  identifier = "archives"
-  name = "归档"
-  url = "/archives/"
+  identifier = "categories"
+  name = "分类"
+  url = "/categories/"
   weight = 5
 
 [[menu.main]]
@@ -74,10 +74,16 @@ buildExpired = false
   weight = 10
 
 [[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 15
+
+[[menu.main]]
   identifier = "search"
   name = "搜索"
   url = "/search/"
-  weight = 15
+  weight = 20
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
