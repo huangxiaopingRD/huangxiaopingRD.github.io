@@ -1,0 +1,25 @@
+---
+description: 所有改动必须经用户 review 后才能 commit 和 push
+alwaysApply: true
+---
+
+# 改动须经用户 Review
+
+所有代码改动必须经用户明确确认后才能执行 `git commit` 和 `git push`。
+
+## 规则
+
+- **禁止主动 commit**：完成代码修改后，不要自动执行 `git commit`，除非用户明确要求。
+- **禁止主动 push**：commit 后不要自动执行 `git push`，除非用户明确要求。
+- **commit 前展示变更**：在 commit 之前，向用户展示所有待提交的改动摘要（变更文件、关键 diff），等待用户确认后再 commit。
+- **push 前提示确认**：commit 完成后提醒用户，等待明确指令后再 push。
+
+```text
+// ❌ 不佳：改完代码直接 commit + push
+git add . && git commit -m "fix bug" && git push
+
+// ✅ 正确：改完代码后停下来，展示变更，等用户确认再 commit，再确认才 push
+// 1. 展示变更摘要，等待用户 review
+// 2. 用户确认 → git add . && git commit -m "fix bug"
+// 3. 用户确认 → git push
+```
